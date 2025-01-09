@@ -1,0 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* set custom min height of sctn to call at media-query */
+@layer utilities {
+  .section-min-height {
+    min-height: calc(
+      100vh - 68px
+    ); /*taking the header hright into away from consideratn*/
+  }
+}
