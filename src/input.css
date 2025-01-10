@@ -3,10 +3,17 @@
 @tailwind utilities;
 
 /* set custom min height of sctn to call at media-query */
+
+/* /note: ccustom animation shld be under utilities */
 @layer utilities {
   .section-min-height {
     min-height: calc(
       100vh - 68px
     ); /*taking the header hright into away from consideratn*/
+  }
+
+  .toggle-btn {
+    /* using [] whuch is an arbirary value bcos i wanna select immediate child */
+    @apply [&>div::before]:translate-y-0 [&>div::before]:rotate-45 [&>div::after]:translate-y-0 [&>div::after]:-rotate-45 [&>div]:bg-transparent [&>div]:rotate-[180deg];
   }
 }
